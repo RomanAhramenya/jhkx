@@ -1,0 +1,258 @@
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  src: url("Montserrat-Light.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: italic;
+  font-weight: 300;
+  src: url("/Montserrat-LightItalic.ttf");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-style: italic;
+  font-weight: 400;
+  src: url("/Montserrat-Italic.ttf");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/Montserrat-Medium.ttf");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-style: italic;
+  font-weight: 500;
+  src: url("/Montserrat-Medium.ttf");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/Montserrat-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-style: italic;
+  font-weight: 600;
+  src: url("/Montserrat-SemiBoldItalic.ttf");
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.main {
+  flex-grow: 1;
+}
+.header,
+.footer {
+  background-color: #0b1427;
+  color: #ffffff;
+}
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.header__inner,
+.footer__top {
+  min-height: 114px;
+  padding: 30px 0;
+}
+.header__top,
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 30px;
+}
+.maps {
+  text-align: center;
+}
+.maps iframe {
+  padding: 10px 0;
+  width: 100%;
+  min-height: 300px;
+}
+.footer__line {
+  border-top: 3px solid #e7742e;
+  padding: 10px;
+}
+.footer__line p {
+  text-align: center;
+  font-size: 13px;
+}
+.logo {
+  text-align: center;
+}
+.logo h1 {
+  line-height: 130%;
+  letter-spacing: 0.1em;
+}
+.logo img {
+  width: 135px;
+  height: auto;
+}
+
+.menu {
+  padding-top: 30px;
+  border-top: 3px solid #e7742e;
+}
+.menu-open,
+.menu-close {
+  display: none;
+}
+
+.menu a,
+.menu span {
+  text-transform: uppercase;
+}
+.mobile-item {
+  display: none;
+}
+.menu__list {
+  display: flex;
+}
+.menu__list span {
+  cursor: no-drop;
+  transition: color 0.2s ease;
+}
+.menu__list span:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+.menu__item {
+  padding: 0 10px;
+  border-right: 3px solid #e7742e;
+}
+.menu__item a {
+  transition: color 0.2s ease;
+}
+.menu__item a:hover {
+  color: #e7742e;
+}
+.drop-down {
+  border-right: none;
+  position: relative;
+}
+.menu__link {
+}
+.dws-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  min-width: 150px;
+  background-color: #0b1427;
+  border: 1px solid #e7742e;
+}
+.dws-menu__item {
+  border-bottom: 1px solid #e7742e;
+}
+.dws-menu__link {
+  white-space: nowrap;
+  display: inline-block;
+  padding: 10px;
+}
+.menu__list li:hover > ul {
+  display: block;
+}
+.contacts {
+}
+.contacts__item {
+  margin-bottom: 5px;
+}
+.contacts__item:last-child {
+  margin-bottom: 0;
+}
+.contacts__link {
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+.contacts__item:hover .contacts__link {
+  color: #e7742e;
+}
+.contacts__link svg {
+  margin-right: 8px;
+  fill: #fff;
+  transition: fill 0.2s ease;
+}
+.contacts__item:hover .contacts__link svg {
+  fill: #e7742e;
+}
+
+@media (max-width: 870px) {
+  .header__top,
+  .footer__top {
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo {
+    margin-bottom: 30px;
+  }
+  .menu-open {
+    width: 40px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+  .menu-open span {
+    background-color: #e7742e;
+    height: 2px;
+    width: 100%;
+  }
+  .menu-close {
+    color: #e7742e;
+    font-size: 40px;
+    line-height: 1;
+  }
+
+  .menu__list {
+    display: none;
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 600px;
+  }
+
+  .menu__list.menu__list--open {
+    display: block;
+  }
+  .menu-open.menu-open__close {
+    display: none;
+  }
+  .menu-close.menu-close__open {
+    display: block;
+  }
+
+  .menu__item {
+    border-right: none;
+    padding: 10px 0;
+    border-bottom: 1px solid #e7742e;
+  }
+  .drop-down {
+    display: none;
+  }
+  .mobile-item {
+    display: list-item;
+  }
+  .contacts__item:hover .contacts__link svg {
+    fill: #fff;
+  }
+  .contacts__item:hover .contacts__link {
+    color: #fff;
+  }
+}
